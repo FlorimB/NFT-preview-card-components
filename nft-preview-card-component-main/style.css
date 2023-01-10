@@ -1,0 +1,153 @@
+
+:root {
+    --softBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --darkBlue: hsl(217, 54%, 11%);
+    --lightDarkBlue: hsl(216, 50%, 16%);
+    --veryLightDarkBlue: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --outfit: 'Outfit', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Semi+Condensed&family=Fraunces:opsz@9..144&family=Inter&family=Montserrat&family=Open+Sans&family=Outfit&family=Public+Sans&family=Raleway&family=Rubik+Bubbles&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--outfit);
+    background-color: var(--darkBlue);
+    color: var(--white);
+    line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    max-width: 375px;
+    border-radius: 20px;
+    background-color: var(--lightDarkBlue);
+    box-shadow: 0px 5px 15px 15px rgba(0, 0, 0, 0.164);
+    padding: 20px;
+}
+
+.card__header {
+    position: relative;
+}
+
+.card__header img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.card__header main {
+    position: absolute;
+    background-color: hsla(178, 100%, 50%, 0.24);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.card__header main:hover {
+    opacity: 1;
+}
+
+.card__header main > img {
+    width: 50px;
+    height: 50px;
+}
+
+.card__body-title {
+    font-size: 22px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.card__body-title:hover {
+    color: var(--cyan);
+}
+
+.card__body-text {
+    letter-spacing: 1px;
+    color: var(--white);
+    opacity: .7;
+    font-weight: lighter;
+    padding-bottom: .9rem;
+}
+
+.card__body-history {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid hsla(215, 52%, 70%, 0.438);
+    margin-bottom: .7rem;
+}
+
+
+.left-side a {
+    color: var(--cyan);
+    display: flex;
+    align-items: center;
+}
+
+.right-side {
+    color: var(--softBlue);
+    display: flex;
+    align-items: center;
+}
+
+.left-side img,
+.right-side img {
+    margin-right: 5px;
+}
+
+
+.card__footer {
+    display: flex;
+    align-items: center;
+}
+
+.card__image {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--softBlue);
+    border-radius: 50%;
+    margin-right: .5rem;
+}
+
+.card__image img {
+    width: 100%;
+}
+
+.card__author {
+    color: var(--softBlue);
+}
+
+.card__author span {
+    color: var(--white);
+    cursor: pointer;
+}
+
+.card__author span:hover {
+    color: var(--cyan);
+}
